@@ -1,0 +1,104 @@
+.hero__section {
+    margin-top: 100px;
+    padding-bottom: 30px;
+    background-color: white;
+    
+    /* height: 100rem; */
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.hero__content h2 {
+  line-height: 55px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: left; /* Align h2 to the left */
+}
+
+.hero__content h2 span {
+  background: linear-gradient(-45deg, #e250e5, #4b50e6, #e250e5, #4b50e6);
+  background-size: 100% 100%;
+  background-clip: text;
+  -webkit-text-stroke: 3px transparent;
+  -webkit-text-fill-color: #14141f;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 0; /* Remove margin-left */
+}
+
+.hero__content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-align: left; /* Align p to the left */
+}
+
+.hero__btns {
+    margin-top: 0px;
+    display: flex;
+    gap: 10px; /* Add space between buttons */
+    align-items: center; /* Align items vertically center */
+}
+
+.explore__btn,
+.create__btn {
+    width: 120px;
+    border: none;
+    outline: none;
+    padding: 7px 25px !important;
+    border-radius: 30px !important;
+    border: 1px solid #000000 !important;
+    font-size: 0.9rem;
+    background: transparent;
+    color: #000000; /* Set text color to red */
+    display: flex; /* Use flexbox to align text and icons */
+    align-items: center; /* Vertically center text and icons */
+    justify-content: center; /* Horizontally center text and icons */
+}
+
+.explore__btn i,
+.create__btn i {
+    color: #000000; /* Set icon color to red */
+    font-size: 1rem;
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.explore__btn a,
+.create__btn a {
+    text-decoration: none;
+    color: #afd7e6; /* Set link color to red */
+}
+
+.hero__btns button a:hover {
+    color: #fc0000; /* Set hover color to red */
+}
+
+.hero__img {
+    width: 500px;
+    margin-left: auto;
+}
+
+.hero__img img {
+    border-radius: 7px;
+}
+
+.hero__video {
+    background-color: transparent;
+}
+
+.hero__video video {
+    background-color: transparent;
+}
+
+.small-video {
+    width:600px;
+    height: 350px;
+    position: relative;
+    right: -90px;
+   
+}
+
+/*productlist*/

@@ -1,0 +1,214 @@
+/* productlist.css */
+
+.hero__section {
+  padding: 20px;
+}
+
+.product-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of items to the next row if necessary */
+  gap: 20px; /* Adds spacing between the cards */
+  justify-content: center; /* Center-aligns the items horizontally */
+}
+
+.product-card {
+  background-color: #fff; /* Background color for the card */
+  border: 1px solid #ddd; /* Border for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the card */
+  width: 200px; /* Set width of each card */
+  padding: 10px; /* Padding inside each card */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically within each card */
+  align-items: center; /* Center-aligns content inside each card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  overflow: hidden; /* Ensure content doesn't overflow the rounded corners */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.product-info {
+  text-align: center;
+}
+
+.product-info img {
+  width: 100%;
+  height: 200px; /* Set a height for the image */
+  object-fit: cover; /* Ensure the image covers the area */
+  border-radius: 8px; /* Optional: rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth transition for image scaling */
+}
+
+.product-card:hover .product-info img {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+
+/* General Button Styling */
+button, .buy-button, .delivery-button {
+  width: 90px;
+  height: 40px;
+  background-color: black; /* Set background to black */
+  color: white; /* Set text color to white */
+  font-size: 1rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  border: none; /* Remove border */
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0px;
+  overflow: hidden;
+  transition: all 0.5s; /* Smooth transition for hover effects */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+button:hover, .buy-button:hover, .delivery-button:hover {
+  background-color: white; /* Change background to white */
+  color: black; /* Change text color to black */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4); /* Slightly enhanced shadow */
+  transition: all 0.5s; /* Smooth transition */
+  transform: rotate(-3deg) scale(1.1); /* Rotation and scaling on hover */
+}
+
+
+/* Styling for Sold Out Badge Image */
+.sold-out-badge img {
+  width: 50px; /* Adjust width of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the Filter Buttons (Category Buttons) */
+.filter-container {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Category Button */
+.category-button {
+  margin: 5px;
+  padding: 10px 20px;
+  width: auto;
+  background-color: black; /* Set background to black */
+  color: white; /* Set text color to white */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Category Button */
+.category-button:hover {
+  background-color: white; /* Change background to white */
+  color: black; /* Change text color to black */
+}
+
+/* Active Category Button Styling */
+.category-button.active {
+  background-color: white; /* Active button has white background */
+  color: black; /* Text color is black */
+  border: none; /* Remove border for active button */
+}
+
+/* Search Input Styles */
+.search-container {
+  position: relative; /* Position relative to place icons inside */
+  margin-bottom: 20px;
+  width: 600px; /* Adjusted width as needed */
+}
+
+.search-input {
+  width: 100%; /* Full width of the container */
+  border: 2px solid black; /* Black border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 8px 40px; /* Padding for top, right, bottom, and left */
+  padding-left: 40px; /* Ensure text is moved 40px from the left edge */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  outline: none; /* Remove default outline */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.search-input:focus {
+  border-color: #333; /* Slightly darker border on focus */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on focus */
+}
+
+.search-input::placeholder {
+  color: gray;
+  padding-left: 30px; /* Placeholder text color */
+}
+
+.search-icon,
+.clear-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: black;
+  transition: opacity 0s ease; /* Smooth transition for opacity */
+}
+
+.search-icon {
+  left: 15px; /* Position the search icon inside the input field */
+  opacity: 1; /* Ensure the search icon is visible by default */
+}
+
+.clear-icon {
+  right: 15px; /* Position the clear icon inside the input field */
+  opacity: 0; /* Hidden by default */
+}
+
+.search-input:not(:placeholder-shown) + .search-icon,
+.search-input:not(:placeholder-shown) + .clear-icon {
+  opacity: 0; /* Hide icons when input is not empty */
+}
+
+.search-input:not(:placeholder-shown) + .clear-icon {
+  opacity: 1; /* Show clear icon when input is not empty */
+}
+
+/* Styling for Orders and Sales Components */
+
+.order-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+.order-item {
+  background-color: #fff; /* Background color for each order item */
+  border: 1px solid #ddd; /* Border for each order item */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside each order item */
+  margin-bottom: 10px; /* Space between items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for each order item */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+}
+
+.order-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.sold-item {
+  background-color: #fff; /* Background color for each sold item */
+  border: 1px solid #ddd; /* Border for each sold item */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside each sold item */
+  margin-bottom: 10px; /* Space between items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for each sold item */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow effect */
+}
+
+.sold-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
